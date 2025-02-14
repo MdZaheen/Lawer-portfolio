@@ -1,64 +1,101 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-y: hidden;
-  }
-    
-  .header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px; /* Adjust padding as needed */
-    background: #f5f5f5;
-    box-sizing: border-box; /* Ensures padding doesn't increase width */
-  }
-  
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  .dropdown-menu {
-    position: absolute;
-    background: white;
-    list-style: none;
-    padding: 10px;
-    display: none;
-  }
-  
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  
-  .header-actions {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .phone-number {
-    text-decoration: none;
-    color: black;
-  }
-  
-  .consultation-btn {
-    background: black;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", serif;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #f5f5f5;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px; /* Adjusted size */
+  font-weight: 500; /* Adjusted weight */
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #333;
+}
+
+.nav-link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: black;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background: white;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  width: 180px;
+  display: flex;
+  flex-direction: column; /* Make dropdown elements vertical */
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px; /* Adjusted */
+  font-weight: 600; /* Adjusted */
+  transition: background 0.3s ease;
+  white-space: nowrap; /* Ensure text doesn't wrap */
+}
+
+.dropdown-item:hover {
+  background: black;
+  color: white;
+  border-radius: 3px;
+}

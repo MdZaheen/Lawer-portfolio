@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "../public/styles/header.css";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // Updated icons
 
 const Header = () => {
   const [pagesOpen, setPagesOpen] = useState(false);
@@ -11,18 +12,20 @@ const Header = () => {
       <div className="logo">Law & Order</div>
       <nav className="nav">
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="#" className="nav-link">Home</a></li>
           <li
             className="dropdown"
             onMouseEnter={() => setPagesOpen(true)}
             onMouseLeave={() => setPagesOpen(false)}
           >
-            <a href="#">Pages ▾</a>
+            <a href="#" className="nav-link">
+              Pages {pagesOpen ? <FaChevronUp /> : <FaChevronDown />}
+            </a>
             {pagesOpen && (
               <ul className="dropdown-menu">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Testimonials</a></li>
+                <li><a href="#" className="dropdown-item">About Us</a></li>
+                <li><a href="#" className="dropdown-item">Our Team</a></li>
+                <li><a href="#" className="dropdown-item">Testimonials</a></li>
               </ul>
             )}
           </li>
@@ -31,16 +34,19 @@ const Header = () => {
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
-            <a href="#">Services ▾</a>
+            <a href="#" className="nav-link">
+              Services {servicesOpen ? <FaChevronUp /> : <FaChevronDown />}
+            </a>
             {servicesOpen && (
               <ul className="dropdown-menu">
-                <li><a href="#">Criminal Law</a></li>
-                <li><a href="#">Family Law</a></li>
-                <li><a href="#">Corporate Law</a></li>
+                <li><a href="#" className="dropdown-item">Insurance Law</a></li>
+                <li><a href="#" className="dropdown-item">Family Law</a></li>
+                <li><a href="#" className="dropdown-item">Real Estate Law</a></li>
+                <li><a href="#" className="dropdown-item">Corporate Law</a></li>
               </ul>
             )}
           </li>
-          <li><a href="#">News</a></li>
+          <li><a href="#" className="nav-link">News</a></li>
         </ul>
       </nav>
     </header>
