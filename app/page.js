@@ -10,10 +10,8 @@ const Page = () => {
       <Header />
       <HeroSection />
       <Appointment />
-      
       <Footer />
     </div>
   );
 };
-
 export default Page;
