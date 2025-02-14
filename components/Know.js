@@ -6,7 +6,7 @@ const Know = () => {
     <section className="legal-section">
       <div className="hero-content">
         <h1 className="hero-title">
-          Lorem Ipsum Dolor Sit Amet Consectetur Sollicitudin Nunc Amet Non Ac Integer Nibh Adipiscing Justo Cursus. Velit Quis Nisi Viverra Urna Ornare.
+        Right to Equality (Article 14-18) – The Indian Constitution ensures that every citizen is treated equally before the law and prohibits discrimination based on religion, race, caste, sex, or place of birth.
         </h1>
         <div className='line'></div>
         <p className="hero-text">
@@ -32,25 +32,25 @@ const Know = () => {
         </p>
         <div className="stats-container">
           <div className="stat-item">
-        <div className='line'></div>
+            <div className='line'></div>
             <h3>250+</h3>
             <p>BUSINESS PARTNERS</p>
             <div className='line'></div>
           </div>
           <div className="stat-item">
-          <div className='line'></div>
+            <div className='line'></div>
             <h3>180+</h3>
             <p>CASES COMPLETED</p>
             <div className='line'></div>
           </div>
           <div className="stat-item">
-          <div className='line'></div>
+            <div className='line'></div>
             <h3>370+</h3>
             <p>HAPPY CUSTOMERS</p>
             <div className='line'></div>
           </div>
           <div className="stat-item">
-          <div className='line'></div>
+            <div className='line'></div>
             <h3>90+</h3>
             <p>AWARD WINNING</p>
             <div className='line'></div>
