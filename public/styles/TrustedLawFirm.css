@@ -1,24 +1,148 @@
-.trust {
-background-color : rgb(0, 0, 0);
-bottom : 0px;
-box-sizing : border-box;
-color : rgb(25, 25, 25);
-display : block;
-font-family :"Times New Roman";
-font-size : 14px;
-font-weight :300;
-height : 638.583px;
-left : 0px;
-line-height : 19.6px;
-opacity : 0.6;
+body {
+    background-color: rgb(25, 25, 25);
+    color: #fff;
+    font-family: "Times New Roman";
+    text-align: center;
+    
 
-right :0px;
-text-size-adjust:100%;
-text-transform : capitalize;
-top : 0px;
-transition-behavior  :normal;
-transition-delay : 0s;
-transition-duration : 0.3s;
+}
 
-width : 1425.33px;
+.container{
+    
+    justify-content: center;
+}
+
+.law-firm-section{
+    height: 552.281px;
+    width: 100%;
+    background-color: rgb(25, 25, 25);
+    justify-content: center;
+    
+}
+
+.law-firm-section {
+    padding: 50px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+p {
+    
+    color: #ccc;
+}
+
+.appointment-btn {
+    
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.appointment-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: #333;
+}
+
+
+body {
+    background-color: rgb(25, 25, 25);
+    color: #fff;
+    font-family: "Times New Roman";
+    text-align: center;
+    
+
+}
+
+.container{
+    text-align: center;
+    padding: 50px;
+}
+
+.law-firm-section{
+    height: 552.281px;
+    width: 100%;
+    background-color: rgb(25, 25, 25);
+    justify-content: center;
+    
+}
+
+.law-firm-section {
+    padding: 50px;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+p {
+    
+    color: #ccc;
+}
+
+.appointment-btn {
+    
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 20px;
+    border-radius: 50px;
+}
+
+.appointment-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: #333;
 }
