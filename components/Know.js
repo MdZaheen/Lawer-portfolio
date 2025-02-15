@@ -62,4 +62,3 @@ const Know = () => {
 };
 
 export default Know;
-
