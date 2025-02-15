@@ -104,7 +104,7 @@
   }
 
   /* Show only two images */
-  .image1,  { display: block; width: 45%; height: auto; }
+  .image1 { display: block; width: 45%; height: auto; }
   .image3, .image4 { display: none; }
 }
 
