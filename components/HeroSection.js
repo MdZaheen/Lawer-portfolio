@@ -13,10 +13,10 @@ const HeroSection = () => {
         <button className="hero-button">BOOK APPOINTMENT →</button>
       </div>
       <div className="image-container">
-        <img src="/images/image1.png" alt="Law Image 1" className="image1" />
+        <img src="/images/image1.png" alt="Law Image 1" className="imageone" />
         <img src="/images/image2.png" alt="Law Image 2" className="image2" />
         <img src="/images/image3.png" alt="Law Image 3" className="image3" />
-        <img src="/images/image4.png" alt="Law Image 4" className="image4" />
+        <img src="/images/image4.png" alt="Law Image 4" className="imageone" />
       </div>
     </div>
   );

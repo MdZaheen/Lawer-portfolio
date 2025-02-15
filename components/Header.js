@@ -1,51 +1,51 @@
 "use client";
 import React, { useState } from "react";
 import "../public/styles/header.css";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // Updated icons
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const Header = () => {
-  const [pagesOpen, setPagesOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [dropdown, setDropdown] = useState(null);
+
+  const toggleDropdown = (menu) => {
+    setDropdown(dropdown === menu ? null : menu);
+  };
+
+  const menuItems = {
+    pages: ["About Us", "Our Team", "Testimonials"],
+    services: ["Insurance Law", "Family Law", "Real Estate Law", "Corporate Law"],
+  };
 
   return (
     <header className="header">
       <div className="logo">Law & Order</div>
       <nav className="nav">
-        <ul>
+        <ul className="nav-list">
           <li><a href="#" className="nav-link">Home</a></li>
-          <li
-            className="dropdown"
-            onMouseEnter={() => setPagesOpen(true)}
-            onMouseLeave={() => setPagesOpen(false)}
-          >
-            <a href="#" className="nav-link">
-              Pages {pagesOpen ? <FaChevronUp /> : <FaChevronDown />}
-            </a>
-            {pagesOpen && (
-              <ul className="dropdown-menu">
-                <li><a href="#" className="dropdown-item">About Us</a></li>
-                <li><a href="#" className="dropdown-item">Our Team</a></li>
-                <li><a href="#" className="dropdown-item">Testimonials</a></li>
-              </ul>
-            )}
-          </li>
-          <li
-            className="dropdown"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
-          >
-            <a href="#" className="nav-link">
-              Services {servicesOpen ? <FaChevronUp /> : <FaChevronDown />}
-            </a>
-            {servicesOpen && (
-              <ul className="dropdown-menu">
-                <li><a href="#" className="dropdown-item">Insurance Law</a></li>
-                <li><a href="#" className="dropdown-item">Family Law</a></li>
-                <li><a href="#" className="dropdown-item">Real Estate Law</a></li>
-                <li><a href="#" className="dropdown-item">Corporate Law</a></li>
-              </ul>
-            )}
-          </li>
+
+          {["pages", "services"].map((menu) => (
+            <li
+              key={menu}
+              className="dropdown"
+              onMouseEnter={() => toggleDropdown(menu)}
+              onMouseLeave={() => toggleDropdown(null)}
+            >
+              <a href="#" className="nav-link">
+                {menu.charAt(0).toUpperCase() + menu.slice(1)}
+                {dropdown === menu ? <FaChevronUp /> : <FaChevronDown />}
+              </a>
+
+              {dropdown === menu && (
+                <ul className="dropdown-menu" role="menu">
+                  {menuItems[menu].map((item, index) => (
+                    <li key={index} className="dropdown-item">
+                      <a href="#">{item}</a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+
           <li><a href="#" className="nav-link">News</a></li>
         </ul>
       </nav>

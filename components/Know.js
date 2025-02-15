@@ -6,7 +6,7 @@ const Know = () => {
     <section className="legal-section">
       <div className="hero-content">
         <h1 className="hero-title">
-        Right to Equality (Article 14-18) – The Indian Constitution ensures that every citizen is treated equally before the law and prohibits discrimination based on religion, race, caste, sex, or place of birth.
+        Right to Equality (Article 14-18) – The Indian Constitution ensures that every citizen is treated equally before the law and prohibits discrimination based on religion, race, caste, sex, or place of birth.   
         </h1>
         <div className='line'></div>
         <p className="hero-text">

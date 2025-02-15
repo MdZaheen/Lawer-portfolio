@@ -1,128 +1,114 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Times New Roman", serif;
-}
-
+/* Header */
 .header {
   width: 100%;
   display: flex;
-  justify-content: space-between; /* Keeps logo on the left, nav on the right */
+  justify-content: space-between;
   align-items: center;
-  padding-top: 35px;
-  padding-bottom: 35px;
-  padding: 49px;
-  /* margin-right: 222.667px; */
-  /* margin-left: 222.667px; */
-  /*padding: 15px 30px;*/
-  background-color: rgba(0, 0, 0, 0);
+  padding: 15px 40px; /* Adjusted padding */
+  background-color: transparent;
   box-shadow: none;
   box-sizing: border-box;
   color: rgb(25, 25, 25);
-  font-family: "Times New Roman";
+  font-family: "Times New Roman", serif;
   font-size: 14px;
   font-weight: 300;
-  height: 47.667px;
-  line-height: 19.6px;
-  z-index: 199;
-  text-size-adjust: 100%;
+  height: auto; /* No fixed height */
+  z-index: 1000;
   text-transform: capitalize;
-  unicode-bidi: isolate;
   position: absolute;
-  
 }
 
+/* Logo */
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: black;
 }
 
-/* Updated navigation styles */
+/* Navigation */
 .nav {
-  margin-left: auto; /* Pushes navigation to the right */
   display: flex;
-  justify-content: flex-end; /* Ensures items align to the right */
-  align-items: center;
 }
 
 .nav ul {
   list-style: none;
   display: flex;
-  gap: 35px;
-  margin: 0;
+  gap: 20px;
   padding: 0;
-  justify-content: flex-end; /* Aligns menu items to the right */
+  margin: 0;
 }
 
-.nav a {
+.nav li {
+  position: relative; /* Ensures dropdown aligns correctly */
+}
+
+/* Nav links */
+.nav-link {
   text-decoration: none;
-  color: black;
-  font-size: 18px;
-  font-weight: 500;
-  position: relative;
-  transition: color 0.3s ease-in-out;
+  color: rgb(25, 25, 25);
+  font-size: 16px;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: 0.3s;
 }
 
 .nav-link:hover {
-  color: #333;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
 }
 
-.nav-link::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background: black;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: width 0.3s ease-in-out;
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
+/* Dropdown menu */
 .dropdown {
-  position: relative;
+  position: relative; 
+  .dropdown {
+    display: inline-block; /* Ensure dropdown has size */
+  }
+  /* Required for positioning dropdown-menu */
 }
 
+/* Dropdown menu */
 .dropdown-menu {
   position: absolute;
+  top: 100%;
+  left: 0;
   background: white;
+  padding: 0; /* Remove padding from the dropdown menu itself */
+  margin: 0; /* Remove margin from the dropdown menu */
   list-style: none;
-  padding: 0;
-  margin-top: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
   border-radius: 5px;
-  width: 180px;
+  min-width: 140px; /* Adjusted width */
   display: flex;
-  flex-direction: column; /* Make dropdown elements vertical */
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
-.dropdown:hover .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+/* Dropdown items */
 .dropdown-item {
-  display: block;
-  padding: 10px 20px;
+  padding: 6px 12px; /* Adjusted padding */
+  white-space: nowrap;
+  margin: 0; /* Remove default margin */
+  line-height: 1.5; /* Ensure consistent line height */
+}
+
+.dropdown-item a {
   text-decoration: none;
   color: black;
-  font-size: 16px;
-  font-weight: 600;
-  transition: background 0.3s ease;
-  white-space: nowrap; /* Ensure text doesn't wrap */
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+  padding: 0; /* Remove padding from <a> */
+  margin: 0; /* Remove margin from <a> */
+}
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.dropdown-item:hover {
-  background: black;
-  color: white;
-  border-radius: 3px;
+.dropdown-item a:hover {
+  background: #f4f4f4;
 }
