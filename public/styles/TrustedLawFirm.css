@@ -1,13 +1,21 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #2d2d2d; /* Blackish-grey background */
+    background-color: #2d2d2d;
+    color: #ffffff;
+} */
+.main{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #2d2d2d;
     color: #ffffff;
 }
 
-.header {
+.headert {
     padding: 4rem 2rem;
     background-color: #2d2d2d;
 }
