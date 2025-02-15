@@ -3,11 +3,13 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #2d2d2d; /* Blackish-grey background */
+    color: #ffffff;
 }
 
 .header {
     padding: 4rem 2rem;
-    background-color: black;
+    background-color: #2d2d2d;
 }
 
 .header-content {
@@ -38,7 +40,7 @@ body {
     display: inline-flex;
     align-self: center;
     padding: 1rem 2rem;
-    background-color: black;
+    background-color: #2d2d2d;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -48,6 +50,13 @@ body {
     border-left: 2px solid white;
     border-radius: 50px 50px 50px 50px;
     white-space: nowrap;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);  
+}
+
+.cta-button:hover {
+    background-color: #2d2d2d;
+    transform: scale(1.05); /* Visible scaling effect */
+    box-shadow: 0 4px 12px #2d2d2d;
 }
 
 .features {
@@ -57,28 +66,36 @@ body {
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: #2d2d2d;
 }
 
 .feature-box {
     padding: 2rem;
-    border: 3px solid black;
-    border-radius: 15px;
+    border: 3px solid rgba(255,255,255,0.2);
+    border-radius: 25px;
+    background-color: #2d2d2d;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px); /* Visible hover effect */
+    border-color: #2d2d2d;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .number {
     font-size: 2rem;
     font-weight: bold;
-    color: black;
+    color: #cccccc;
     margin-bottom: 1rem;
 }
 
 .feature-box h3 {
-    color: black;
+    color: #1a1a1a;
     margin-bottom: 1rem;
 }
 
 .feature-box p {
-    color: black;
+    color: #1a1a1a;
     font-size: 0.9rem;
 }
 
@@ -104,4 +121,24 @@ body {
     .header h1 {
         font-size: 2rem;
     }
+}
+
+.header-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.header-text {
+    color: #cccccc;
+}
+
+.feature-box h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.feature-box p {
+    color: #cccccc;
+    font-size: 0.9rem;
 }
