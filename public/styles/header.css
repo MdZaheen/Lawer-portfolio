@@ -24,12 +24,25 @@ body, html {
 /* Ensure nav takes full width */
 .nav {
   width: 100%;
-  margin: 0;
-  padding: 0px;
+  height: 46.677px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  /* margin-left: 20px; */
+  /* margin-right: 243px; */
+  
  
-  display: flex;
+  display:flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  align-items:center;
+  box-sizing :border-box;
+  column-gap :20px;
+
+font-family: "Times New Roman";
+font-size :14px;
+font-weight: 300;
+justify-content :space-between;
+line-height :19.6px;
 }
 
 /* Fix container issues */
