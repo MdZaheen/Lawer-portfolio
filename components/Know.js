@@ -6,7 +6,7 @@ const Know = () => {
     <section className="legal-section">
       <div className="hero-content">
         <h1 className="hero-title">
-        Right to Equality (Article 14-18) – The Indian Constitution ensures that every citizen is treated equally before the law and prohibits discrimination based on religion, race, caste, sex, or place of birth.   
+        Right to Equality (Article 14-18) - The Indian Constitution ensures that every citizen is treated equally before the law and prohibits discrimination based on religion, race, caste, sex, or place of birth.   
         </h1>
         <div className='line'></div>
         <p className="hero-text">
@@ -60,5 +60,8 @@ const Know = () => {
     </section>
   );
 };
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+</style>
 
 export default Know;

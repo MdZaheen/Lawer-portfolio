@@ -4,7 +4,7 @@ const TrustedLawFirm = () => {
     return (
         <>
             <div className="main">
-                <header className="headert">
+                <header className="header-t">
                     <div className="header-content">
                         <div className="header-main">
                             <h1>Trusted And Full Service

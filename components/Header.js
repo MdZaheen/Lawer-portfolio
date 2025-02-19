@@ -8,8 +8,8 @@ function Header() {
     <div>
       <header className="header">
         <nav className="nav">
-          <a href="/" className="logo">
-            Law & Order
+          <a  className="logo">
+            HASHMAT PASHA 
           </a>
           
           <div className="nav-links">
