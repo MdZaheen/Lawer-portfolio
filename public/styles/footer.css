@@ -1,4 +1,134 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .footer {
+  background-color: #f8f8f8;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background: #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+  background: #555;
+}
+
+.contact-info p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.quick-links {
+  list-style: none;
+}
+
+.quick-links li {
+  margin-bottom: 12px;
+}
+
+.quick-links a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.quick-links a:hover {
+  color: #333;
+}
+
+.newsletter-form input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.privacy-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.privacy-checkbox input {
+  width: 16px;
+  height: 16px;
+}
+
+.privacy-checkbox label {
+  color: #666;
+  font-size: 14px;
+}
+
+.subscribe-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border: 2px solid #333;
+  border-radius: 30px;
+  background: transparent;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.subscribe-button:hover {
+  background: #333;
+  color: white;
+}
+
+.subscribe-button span {
+  margin-left: 8px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-section {
     text-align: center;
     padding: 10px;
     background: #333;
@@ -19,3 +149,15 @@ html {
 body {
   -ms-overflow-style: none;
 }
+
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+  
+  .quick-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

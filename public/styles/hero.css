@@ -1,16 +1,18 @@
+/* ======== Hero Section (Main Container) ======== */
 .hero-section {
   background-color: rgb(199, 202, 193);
   background-image: url("/images/background.png");
-  /* Background image */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
   color: rgb(25, 25, 25);
+  
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
+
   font-family: "Times New Roman", serif;
   font-size: 14px;
   font-weight: 300;
@@ -18,15 +20,21 @@
   width: 100%;
   text-align: center;
   position: relative;
-  padding: 0px;
-  margin: 0px;
+  padding: 20px;
 }
 
+/* ======== Hero Content ======== */
 .hero-content {
   max-width: 600px;
   text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
+/* ======== Text Styling ======== */
 .hero-content h1 {
   font-size: 32px;
   font-weight: bold;
@@ -54,62 +62,80 @@
   color: white;
 }
 
+/* ======== Image Container ======== */
 .image-container {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
   gap: 10px;
-  height: 354px;
-  width: 922.125px;
+  height: auto;
+  width: 100%;
+  max-width: 922px;
   margin-top: 30px;
 }
 
+/* ======== Individual Image Styles ======== */
 .image-container img {
   object-fit: cover;
 }
 
-.image1 {
-  width: 213px;
-  height: 239px;
+.image1 { width: 213px; height: 239px; align-self: flex-start; }
+.image2 { width: 213.56px; height: 354px; }
+.image3 { width: 213.56px; height: 354px; }
+.image4 { width: 213px; height: 292px; align-self: flex-start; }
+
+/* ======== RESPONSIVE DESIGN ======== */
+
+/* Medium Screens (Tablets) - Show Only Two Images */
+@media (max-width: 1024px) {
+  .hero-section {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .hero-content h1 { font-size: 28px; }
+  .hero-content p { font-size: 13px; }
+  .hero-button { font-size: 14px; padding: 8px 16px; }
+
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Show only two images */
+  .image1 { display: block; width: 45%; height: auto; }
+  .image3, .image4 { display: none; }
 }
 
-.image2 {
-  width: 213.56px;
-  height: 354px;
+/* Small Screens (Phones) - Hide All Images */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    padding: 40px 15px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content h1 { font-size: 24px; }
+  .hero-content p { font-size: 12px; }
+  .hero-button { font-size: 12px; padding: 6px 12px; }
+
+  /* Hide all images */
+  .image-container {
+    display: none;
+  }
 }
 
-.image3 {
-  width: 213.56px;
-  height: 354px;
-}
+/* Extra Small Screens (Very Small Phones) */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 30px 10px;
+  }
 
-.image4 {
-  width: 213px;
-  height: 292px;
-}
-
-.lawhead {
-  height: 162px;
-  width: 471px;
-  font-family: "Sora, sans-serif";
-  font-size: 32px;
-  font-weight: 700;
-  box-sizing: border-box;
-  max-width: 100%;
-  text-align: left;
-  text-size-adjust: 100% ;
-  text-transform: capitalize;
-}
-
-/* Hide scrollbar for Chrome, Safari, and Edge */
-::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for Firefox */
-html {
-  scrollbar-width: none;
-}
-
-/* Hide scrollbar for Internet Explorer, Edge */
-body {
-  -ms-overflow-style: none;
+  .hero-content h1 { font-size: 22px; }
+  .hero-content p { font-size: 11px; }
+  .hero-button { font-size: 10px; padding: 5px 10px; }
 }
