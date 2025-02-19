@@ -1,4 +1,8 @@
 /* Header */
+
+html,body{
+  width: 100%;
+}
 .header {
   width: 100%;
   display: flex;
@@ -27,6 +31,7 @@
 /* Navigation */
 .nav {
   display: flex;
+
 }
 
 .nav ul {
