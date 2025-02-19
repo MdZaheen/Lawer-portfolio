@@ -1,0 +1,131 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+.full-body {
+    background-color: #2d2d2d;
+    color: white;
+    /* padding: 80px; */
+    padding-left: 110px;
+    padding-right: 150px;
+}
+
+/* Header with buttons */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.header h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 40px;
+}
+
+/* Buttons styling */
+.btn {
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    display: inline-block;
+}
+
+/* Button colors */
+.btn-black {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+.btn-outline {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+/* Hover Effect: Smooth ease-in-out */
+.btn:hover {
+    transform: translateY(-5px);
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-black:hover {
+    background-color: black;
+    color: white;
+    transition: ease-in-out 0.5s;
+}
+
+.btn-outline:hover {
+    background-color: black;
+    color: white;
+    transition: ease-in-out 0.5s;
+}
+
+/* Main container layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 70px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+/* Text content styling */
+.text-content {
+    max-width: 50%;
+}
+
+.text-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.text-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Image section styling */
+.image-section {
+    display: flex;
+    gap: 20px;
+    padding-left: 50px;
+}
+
+/* Image Slide-in Effect */
+.image-section img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    opacity: 1; /* Visible on page load */
+    transform: translateX(100px);
+    transition: all 0.8s ease-in-out;
+}
+
+/* When the images are visible, they slide in */
+.image-section img.show {
+    opacity: 1;
+    transform: translateX(0);
+}

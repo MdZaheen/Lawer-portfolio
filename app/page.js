@@ -5,6 +5,7 @@ import TrustedLawFirm from "../components/TrustedLawFirm.js";
 import Appointment from "../components/Appointment.js";
 // import Footer from "../components/Footer.js";
 import Know from "../components/Know.js";
+import LatestCase from "@/components/LatestCase.js";
 
 
 const Page = () => {
@@ -15,6 +16,7 @@ const Page = () => {
       <Appointment />
       <TrustedLawFirm />
       <Know/>
+      <LatestCase/>
       
     </div>
   );

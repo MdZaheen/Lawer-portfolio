@@ -3,7 +3,7 @@ import "../public/styles/TrustedLawFirm.css";
 const TrustedLawFirm = () => {
     return (
     <>
-    <header className="header">
+    <header className="header-t">
         <div className="header-content">
             <div className="header-main">
                 <h1>Trusted And Full Service 
