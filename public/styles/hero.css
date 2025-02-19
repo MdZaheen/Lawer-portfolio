@@ -1,6 +1,7 @@
 .hero-section {
   background-color: rgb(199, 202, 193);
-  background-image: url("/images/background.png"); /* Background image */
+  background-image: url("/images/background.png");
+  /* Background image */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,6 +18,8 @@
   width: 100%;
   text-align: center;
   position: relative;
+  padding: 0px;
+  margin: 0px;
 }
 
 .hero-content {
@@ -81,4 +84,32 @@
 .image4 {
   width: 213px;
   height: 292px;
+}
+
+.lawhead {
+  height: 162px;
+  width: 471px;
+  font-family: "Sora, sans-serif";
+  font-size: 32px;
+  font-weight: 700;
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: left;
+  text-size-adjust: 100% ;
+  text-transform: capitalize;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Internet Explorer, Edge */
+body {
+  -ms-overflow-style: none;
 }

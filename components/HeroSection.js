@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <div className="hero-section">
       <div className="hero-content">
-        <h1>Protecting Your Rights In The Field Of Law & Order</h1>
+        <h1 className="lawhead">Protecting Your Rights In The Field Of Law & Order</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur. Massa scelerisque enim dui tristique massa hendrerit.
           Phasellus est aliquet suspendisse sed et cras viverra vitae. Ipsum in tempor turpis ut aliquet tincidunt.
