@@ -2,10 +2,11 @@ import React from "react";
 import Header from "../components/Header.js";
 import HeroSection from "../components/HeroSection.js";
 import TrustedLawFirm from "../components/TrustedLawFirm.js";
-import Appointment from "../components/Appointment.js";
+// import Appointment from "../components/Appointment.js";
+import Know from "@/components/Know.js";
+import Footer from "@/components/Footer.js";
 // import Footer from "../components/Footer.js";
-import Know from "../components/Know.js";
-import LatestCase from "@/components/LatestCase.js";
+
 
 
 const Page = () => {
@@ -13,10 +14,9 @@ const Page = () => {
     <div>
       <Header />
       <HeroSection />
-      <Appointment />
       <TrustedLawFirm />
       <Know/>
-      <LatestCase/>
+      <Footer/>
       
     </div>
   );

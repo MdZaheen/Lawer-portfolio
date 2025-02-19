@@ -5,7 +5,7 @@ const LatestCase = () => {
     return (
             <>
             <div className="full-body">
-                <div className="header">
+                <div className="header-t">
                     <h1>See Our Clients Latest Case Studies</h1>
                     <div className="header-buttons">
                         <a href="#" className="btn btn-black">Free Consultation →</a>

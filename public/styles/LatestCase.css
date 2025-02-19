@@ -16,7 +16,7 @@
 }
 
 /* Header with buttons */
-.header {
+.header-t {
     display: flex;
     justify-content: space-between;
     align-items: center;
