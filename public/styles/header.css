@@ -1,31 +1,54 @@
+<<<<<<< HEAD
 /* Header */
 
 html,body{
   width: 100%;
 }
 .header {
+=======
+
+/* Remove default margin/padding */
+body, html {
+  margin: 0;
+  padding: 0px;
+>>>>>>> bf07702bb162ae348a6299cd7805c6457271fcb8
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px; /* Adjusted padding */
-  background-color: transparent;
-  box-shadow: none;
-  box-sizing: border-box;
-  color: rgb(25, 25, 25);
-  font-family: "Times New Roman", serif;
-  font-size: 14px;
-  font-weight: 300;
-  height: auto; /* No fixed height */
-  z-index: 1000;
-  text-transform: capitalize;
-  position: absolute;
+  /* overflow-x: hidden; Prevent horizontal scrolling */
 }
 
-/* Logo */
+/* Ensure header spans full width */
+.header {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  /* padding-right: 20px; */
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  box-shadow: none;
+}
+
+/* Ensure nav takes full width */
+.nav {
+  width: 100%;
+  margin: 0;
+  padding: 0px;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Fix container issues */
+
+
+/* Adjust nav links and logo */
 .logo {
   font-size: 24px;
   font-weight: bold;
+<<<<<<< HEAD
 }
 
 /* Navigation */
@@ -49,71 +72,136 @@ html,body{
 /* Nav links */
 .nav-link {
   text-decoration: none;
+=======
+>>>>>>> bf07702bb162ae348a6299cd7805c6457271fcb8
   color: rgb(25, 25, 25);
-  font-size: 16px;
-  padding: 10px 15px;
+  text-decoration: none;
+  padding-left: 15px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-right: 15px;
+}
+
+.nav-link {
+  position: relative;
+  color: rgb(25, 25, 25);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link span:first-child {
   display: inline-block;
-  transition: 0.3s;
 }
 
-.nav-link:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
+.nav-link span:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(25, 25, 25);
+  transition: width 0.3s ease;
 }
 
-/* Dropdown menu */
+.nav-link:hover span:nth-child(2) {
+  width: 100%;
+}
+
+/* .search-icon {
+  width: 20px;
+  height: 20px;
+  color: rgb(25, 25, 25);
+  cursor: pointer;
+} */
+
 .dropdown {
-  position: relative; 
-  .dropdown {
-    display: inline-block; /* Ensure dropdown has size */
-  }
-  /* Required for positioning dropdown-menu */
+  position: relative;
+  display: inline-block;
 }
 
-/* Dropdown menu */
-.dropdown-menu {
+.chevron-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .chevron-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  background-color:rgb (199, 202, 193);
   position: absolute;
   top: 100%;
-  left: 0;
-  background: white;
-  padding: 0; /* Remove padding from the dropdown menu itself */
-  margin: 0; /* Remove margin from the dropdown menu */
-  list-style: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  min-width: 140px; /* Adjusted width */
-  display: flex;
-  flex-direction: column;
-  visibility: hidden;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  transform-origin: top center;
 }
 
-/* Dropdown items */
-.dropdown-item {
-  padding: 6px 12px; /* Adjusted padding */
-  white-space: nowrap;
-  margin: 0; /* Remove default margin */
-  line-height: 1.5; /* Ensure consistent line height */
-}
-
-.dropdown-item a {
-  text-decoration: none;
-  color: black;
-  display: block;
-  width: 100%;
-  transition: 0.3s;
-  padding: 0; /* Remove padding from <a> */
-  margin: 0; /* Remove margin from <a> */
-}
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-menu {
-  visibility: visible;
+.dropdown:hover .dropdown-content {
+  
   opacity: 1;
-  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
 }
 
+<<<<<<< HEAD
 .dropdown-item a:hover {
   background: #f4f4f4;
 }
+=======
+.dropdown-link {
+  display: block;
+  padding: 12px 20px;
+  color: rgb(25, 25, 25);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-link:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.dropdown-link:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.dropdown-link:hover {
+  background-color: rgba(25, 25, 25, 0.05);
+}
+
+/* Ensure the hero section has padding to avoid overlap with the fixed header */
+.hero-section {
+  padding-top: 100px; /* Adjust this value as needed */
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Internet Explorer, Edge */
+body {
+  -ms-overflow-style: none;
+}
+>>>>>>> bf07702bb162ae348a6299cd7805c6457271fcb8

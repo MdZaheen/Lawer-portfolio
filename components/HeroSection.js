@@ -56,8 +56,13 @@ const HeroSection = () => {
   return (
     <div className="hero-section" ref={heroRef}>
       <div className="hero-content">
+<<<<<<< HEAD
         <h1 ref={headingRef}>Protecting Your Rights In The Field Of Law & Order</h1>
         <p ref={paragraphRef}>
+=======
+        <h1 className="lawhead">Protecting Your Rights In The Field Of Law & Order</h1>
+        <p>
+>>>>>>> bf07702bb162ae348a6299cd7805c6457271fcb8
           Lorem ipsum dolor sit amet consectetur. Massa scelerisque enim dui tristique massa hendrerit.
           Phasellus est aliquet suspendisse sed et cras viverra vitae. Ipsum in tempor turpis ut aliquet tincidunt.
         </p>

@@ -150,6 +150,26 @@ html, body {
 
   .footer-section {
     text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+  }
+
+  /* Hide scrollbar for Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Internet Explorer, Edge */
+body {
+  -ms-overflow-style: none;
+}
+
   }
 
   .social-icons {
@@ -161,4 +181,4 @@ html, body {
     flex-direction: column;
     align-items: center;
   }
-}
+

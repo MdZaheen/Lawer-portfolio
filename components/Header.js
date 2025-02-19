@@ -1,56 +1,61 @@
-"use client";
-import React, { useState } from "react";
-import "../public/styles/header.css";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import React from 'react';
 
-const Header = () => {
-  const [dropdown, setDropdown] = useState(null);
+import { Search, ChevronDown } from 'lucide-react';
+import '../public/styles/header.css';
 
-  const toggleDropdown = (menu) => {
-    setDropdown(dropdown === menu ? null : menu);
-  };
-
-  const menuItems = {
-    pages: ["About Us", "Our Team", "Testimonials"],
-    services: ["Insurance Law", "Family Law", "Real Estate Law", "Corporate Law"],
-  };
-
+function Header() {
   return (
-    <header className="header">
-      <div className="logo">Law & Order</div>
-      <nav className="nav">
-        <ul className="nav-list">
-          <li><a href="#" className="nav-link">Home</a></li>
+    <div>
+      <header className="header">
+        <nav className="nav">
+          <a href="/" className="logo">
+            Law & Order
+          </a>
+          
+          <div className="nav-links">
+            <NavLink href="/">Home</NavLink>
+            
+            <div className="dropdown">
+              <NavLink href="/pages">
+                Pages
+                <ChevronDown className="chevron-icon" />
+              </NavLink>
+              <div className="dropdown-content">
+                <a href="/about" className="dropdown-link">About Us</a>
+                <a href="/case-studies" className="dropdown-link">Case Studies</a>
+                <a href="/attorneys" className="dropdown-link">Attorneys</a>
+              </div>
+            </div>
 
-          {["pages", "services"].map((menu) => (
-            <li
-              key={menu}
-              className="dropdown"
-              onMouseEnter={() => toggleDropdown(menu)}
-              onMouseLeave={() => toggleDropdown(null)}
-            >
-              <a href="#" className="nav-link">
-                {menu.charAt(0).toUpperCase() + menu.slice(1)}
-                {dropdown === menu ? <FaChevronUp /> : <FaChevronDown />}
-              </a>
+            <div className="dropdown">
+              <NavLink href="/services">
+                Services
+                <ChevronDown className="chevron-icon" />
+              </NavLink>
+              <div className="dropdown-content">
+                <a href="/insurance-law" className="dropdown-link">Insurance Law</a>
+                <a href="/family-law" className="dropdown-link">Family Law</a>
+                <a href="/real-estate-law" className="dropdown-link">Real Estate Law</a>
+                <a href="/corporate-law" className="dropdown-link">Corporate Law</a>
+              </div>
+            </div>
 
-              {dropdown === menu && (
-                <ul className="dropdown-menu" role="menu">
-                  {menuItems[menu].map((item, index) => (
-                    <li key={index} className="dropdown-item">
-                      <a href="#">{item}</a>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-
-          <li><a href="#" className="nav-link">News</a></li>
-        </ul>
-      </nav>
-    </header>
+            <NavLink href="/news">News</NavLink>
+            {/* <Search className="search-icon" /> */}
+          </div>
+        </nav>
+      </header>
+    </div>
   );
-};
+}
+
+function NavLink({ href, children }) {
+  return (
+    <a href={href} className="nav-link">
+      <span>{children}</span>
+      <span></span>
+    </a>
+  );
+}
 
 export default Header;
