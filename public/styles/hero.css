@@ -1,4 +1,6 @@
 /* ======== Hero Section (Main Container) ======== */
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
 .hero-section {
   background-color: rgb(199, 202, 193);
   background-image: url("/images/background.png");
@@ -7,7 +9,7 @@
   background-size: cover;
   box-sizing: border-box;
   color: rgb(25, 25, 25);
-  
+  font-family: 'Prompt', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -24,7 +26,7 @@
 }
 
 /* ======== Hero Content ======== */
-.hero-content {
+div.hero-content {
   align-items :center;
   background-size : cover;
   box-sizing :border-box;
@@ -39,7 +41,7 @@
   height :162px;
   justify-content: space-between;
   line-height :19.6px;
-  margin-bottom :60px;
+  margin-bottom :20px;
   max-width :100%;
   position :relative;
   row-gap : 20px;

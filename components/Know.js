@@ -4,24 +4,36 @@ import '../public/styles/kau.css';
 const Know = () => {
   return (
     <section className="legal-section">
-      <div className="hero-content">
-        <h1 className="hero-title">
-        Right to Equality (Article 14-18) - The Indian Constitution ensures that every citizen is treated equally before the law and prohibits discrimination based on religion, race, caste, sex, or place of birth.   
+      <div className="hero-content-know">
+        <h1 className="hero-title-k">
+          Right to Equality (Article 14-18) - The Indian Constitution Ensures That Every Citizen Is Treated Equally
         </h1>
-        <div className='line'></div>
-        <p className="hero-text">
-          Lorem Ipsum Dolor Sit Amet Consectetur. Sagittis Diam At Congue In Aenean. Leo In Amet Rhoncus Sit Sit Lobortis. At Nunc A Tempor Aliquam Malesuada Mus Vitae. Dignissim Morbi Est Lectus Fringilla Tellus.
-        </p>
-        <p className="hero-text">
-          In Lectus In Dolor Vulputate Ultricies Egestas Nulla. Nec Sit At Gravida Sagittis. Nulla Massa A Tortor Justo. Malesuada Donec Tristique Risus Pulvinar Sollicitudin Dictumst Vitae Hac. Interdum Consectetur Ipsum Ullamcorper Quis Augue Iaculis. Nibh Sed Nunc Id Lobortis Ut.
-        </p>
-        <button className="know-more-btn">KNOW ABOUT US →</button>
+        <div className="line"></div>
+        <div className="text-content">
+          <div>
+            <p className="hero-text">
+              Lorem Ipsum Dolor Sit Amet Consectetur. Sagittis Diam At Congue In Aenean. Leo In Amet Rhoncus Sit Sit Lobortis.
+              At Nunc A Tempor Aliquam Malesuada Mus Vitae. Dignissim Morbi Est Lectus Fringilla Tellus.
+            </p>
+          </div>
+          <div>
+            <p className="hero-text">
+              In Lectus In Dolor Vulputate Ultricies Egestas Nulla. Nec Sit At Gravida Sagittis. Nulla Massa A Tortor Justo.
+              Malesuada Donec Tristique Risus Pulvinar Sollicitudin Dictumst Vitae Hac. Interdum Consectetur Ipsum Ullamcorper
+              Quis Augue Iaculis. Nibh Sed Nunc Id Lobortis Ut.
+            </p>
+            <a href="#" className="know-more-btn">
+              KNOW ABOUT US <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
       </div>
 
       <div className="video-section">
         <div className="video-container">
-          {/* Replace with your video component or image */}
-          <div className="play-button">▶</div>
+          <button className="play-button" aria-label="Play Video">
+            ▶
+          </button>
         </div>
       </div>
 
@@ -31,37 +43,22 @@ const Know = () => {
           Nulla Massa A Tortor Justo. Malesuada Donec Tristique Risus Pulvinar Sollicitudin Dictumst Vitae Hac. Interdum Consectetur Ipsum.
         </p>
         <div className="stats-container">
-          <div className="stat-item">
-            <div className='line'></div>
-            <h3>250+</h3>
-            <p>BUSINESS PARTNERS</p>
-            <div className='line'></div>
-          </div>
-          <div className="stat-item">
-            <div className='line'></div>
-            <h3>180+</h3>
-            <p>CASES COMPLETED</p>
-            <div className='line'></div>
-          </div>
-          <div className="stat-item">
-            <div className='line'></div>
-            <h3>370+</h3>
-            <p>HAPPY CUSTOMERS</p>
-            <div className='line'></div>
-          </div>
-          <div className="stat-item">
-            <div className='line'></div>
-            <h3>90+</h3>
-            <p>AWARD WINNING</p>
-            <div className='line'></div>
-          </div>
+          {[
+            { count: "250+", label: "BUSINESS PARTNERS" },
+            { count: "180+", label: "CASES COMPLETED" },
+            { count: "370+", label: "HAPPY CUSTOMERS" },
+            { count: "90+", label: "AWARD WINNING" },
+          ].map((stat, index) => (
+            <div key={index} className="stat-item">
+              <h3>{stat.count}</h3>
+              <p>{stat.label}</p>
+              <div className="linelast"></div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 };
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-</style>
 
 export default Know;

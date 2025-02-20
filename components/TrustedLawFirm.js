@@ -1,49 +1,56 @@
-import React from "react";
-import "../public/styles/TrustedLawFirm.css";
+import React from 'react';
+import '../public/styles/TrustedLawFirm.css';
+
 const TrustedLawFirm = () => {
-    return (
-        <>
-            <div className="main">
-                <header className="header-t">
-                    <div className="header-content">
-                        <div className="header-main">
-                            <h1>Trusted And Full Service
-                                Law Firm For Every Client</h1>
-                            <p>Lorem Ipsum Dolor Sit Amet Connecticut: Valuput Scolerisque
-                                Facilitas Nulla Morbi A la Et Odio Vivem: Scolerisque Condimentum Nulla.</p>
-                        </div>
-                        <a href="#" className="cta-button">BOOK APPOINTMENT →</a>
-                    </div>
-                </header>
-                <section className="features">
-                    <div className="feature-box">
-                        <div className="number">01</div>
-                        <h3>Expert Attorneys</h3>
-                        <p>Lorem Ipsum Dolor Sit Amet Connecticut: Sed Riusa Vivem Nunc Congus Nulla Penatibus Oct.</p>
-                    </div>
+  return (
+    <section className="hero">
+      <div className="hero-container">
+        <div className="hero-content-l">
+          <div>
+            <h1 className="hero-title-l">
+              Trusted And Full Service Law Firm For Every Client
+            </h1>
+          </div>
+          <div>
+            <p className="hero-description-l">
+              Lorem Ipsum Dolor Sit Amet Consectetur. Volutpat Scelerisque
+              Facilisis Nibh Morbi A Id Et Odio Viverra. Scelerisque Condimentum Nulla.
+            </p>
+            <a href="#appointment" className="book-appointment">
+              BOOK APPOINTMENT
+              <span>→</span>
+            </a>
+          </div>
+        </div>
 
-                    <div className="feature-box">
-                        <div className="number">02</div>
-                        <h3>Financial Analysis</h3>
-                        <p>Lorem Ipsum Dolor Sit Amet Connecticut: Sed Riusa Vivem Nunc Congus Nulla Penatibus Oct.</p>
-                    </div>
+        <div className="services-grid">
+          <div className="service-card">
+            <div className="service-number">01</div>
+            <h3 className="service-title">Expert Attorneys</h3>
+            <p className="service-description">
+              Lorem Ipsum Dolor Sit Amet Consectetur. Sed Risus Viverra Nunc Congue Nulla Penatibus Orci.
+            </p>
+          </div>
 
-                    <div className="feature-box">
-                        <div className="number">03</div>
-                        <h3>Highly Recommend</h3>
-                        <p>Lorem Ipsum Dolor Sit Amet Connecticut: Sed Riusa Vivem Nunc Congus Nulla Penatibus Oct.</p>
-                    </div>
+          <div className="service-card">
+            <div className="service-number">02</div>
+            <h3 className="service-title">Financial Analysis</h3>
+            <p className="service-description">
+              Lorem Ipsum Dolor Sit Amet Consectetur. Sed Risus Viverra Nunc Congue Nulla Penatibus Orci.
+            </p>
+          </div>
 
-                    <div className="feature-box">
-                        <div className="number">04</div>
-                        <h3>New Added Service</h3>
-                        <p>Lorem Ipsum Dolor Sit Amet Connecticut: Sed Riusa Vivem Nunc Congus Nulla Penatibus Oct.</p>
-                    </div>
-                </section>
-
-            </div>
-        </>
-    );
+          <div className="service-card">
+            <div className="service-number">03</div>
+            <h3 className="service-title">Highly Recommend</h3>
+            <p className="service-description">
+              Lorem Ipsum Dolor Sit Amet Consectetur. Sed Risus Viverra Nunc Congue Nulla Penatibus Orci.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default TrustedLawFirm;

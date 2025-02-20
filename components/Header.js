@@ -9,7 +9,7 @@ function Header() {
       <header className="header">
         <nav className="nav">
           <a  className="logo">
-            HASHMAT PASHA 
+            HASHMATH PASHA 
           </a>
           
           <div className="nav-links">
