@@ -6,6 +6,8 @@ import TrustedLawFirm from "../components/TrustedLawFirm.js";
 import Know from "@/components/Know.js";
 import Footer from "@/components/Footer.js";
 // import Footer from "../components/Footer.js";
+import News from "@/components/News.js";
+
 
 
 
